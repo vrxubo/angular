@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>step 4</title>
+  <script src="../js/angular.js"></script>
+  <script src="./step4.js"></script>
+</head>
+<body ng-app="myApp">
+  <div class="controller" ng-controller="MyController">
+    <input type="search" ng-model="query">
+    <select  ng-model="orderProp">
+      <option value="age">age</option>
+      <option value="name">name</option>
+    </select>
+    <ul>
+      <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+        <h2>{{ phone.name }}</h2>
+        <p>{{ phone.snippet }}</p>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

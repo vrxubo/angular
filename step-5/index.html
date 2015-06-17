@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>step-5</title>
+  <script src="../js/angular.js"></script>
+  <script src="./step5.js"></script>
+</head>
+<body ng-app="myApp">
+  <ul ng-controller="PhoneListControl">
+    <li ng-repeat="phone in phones">
+      name:{{ phone.name }}
+      id: {{ phone.id }}
+    </li>
+  </ul>
+</body>
+</html>
